@@ -7,17 +7,21 @@ from file_handler import download_csv_sheet
 
 def run():
     csv_sheet_name = 'data.csv'
-    url = 'https://github.com/fivethirtyeight/data/blob/master/airline-safety/airline-safety.csv'
+    url = 'https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv'
     download_csv_sheet(csv_sheet_name, url)
     with open(csv_sheet_name, encoding='utf-8') as f:
         print_question_separator('1. How many incidents happened between 1985-1999?')
+        question1.run(f)
 
         print_question_separator('2. How many death-incidents happened between 1985-1999?')
+        question2.run(f)
 
         print_question_separator('3. How many incidents happened between 2000-2014?')
+        question3.run(f)
 
         print_question_separator('4. How many death-incidents happened between 2000-2014?')
-
+        question4.run(f)
+        
         print_question_separator('5. Has the amount of incidents increased, comparing the later statistics to the earlier ones?')
 
 
