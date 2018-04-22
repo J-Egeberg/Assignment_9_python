@@ -2,6 +2,7 @@ import question1
 import question2
 import question3
 import question4
+import question5
 from file_handler import download_csv_sheet
 
 
@@ -21,9 +22,9 @@ def run():
 
         print_question_separator('4. How many death-incidents happened between 2000-2014?')
         question4.run(f)
-        
-        print_question_separator('5. Has the amount of incidents increased, comparing the later statistics to the earlier ones?')
 
+        print_question_separator('5. Has the amount of incidents increased, comparing the later statistics to the earlier ones?')
+        question5.run(f)
 
 def print_question_separator(question_number):
     print('\nQuestion ' + str(question_number), end='\n' + 100 * '-' + '\n')
